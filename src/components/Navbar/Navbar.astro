@@ -1,0 +1,6 @@
+---
+import Navbar from './Navbar.svelte';
+const currentPath = Astro.url.pathname;
+---
+
+<Navbar client:load currentPath={currentPath} />
