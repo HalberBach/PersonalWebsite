@@ -1,5 +1,35 @@
 @import "tailwindcss";
 
+:root {
+  --bg: #0a0a0a;
+  --bg-secondary: #131313;
+  --primary: #fdfded;
+}
+
+.bg-main {
+  background-color: var(--bg);
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.primary {
+  background-color: var(--primary);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--bg-secondary);
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
+
 html {
   scroll-behavior: smooth;
 }
