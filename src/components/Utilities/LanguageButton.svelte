@@ -8,7 +8,7 @@
 
 <button
   type="button"
-  class="w-10 h-10 border-2 primary border-primary text-secondary text-xs font-bold transition"
+  class="w-10 h-10 border-2 primary border-primary text-secondary text-lg font-anton transition"
   on:click={toggleLanguage}
 >
   {lang}
