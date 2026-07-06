@@ -16,10 +16,10 @@
 <svelte:window bind:scrollY />
 
 <header
-  class={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out py-10 bg-main`}
+  class={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out py-10 bg-secondary`}
 >
   <div class="relative flex items-center justify-center px-6 md:px-10">
-    <a href="/" class="text-white absolute left-10 font-anton transition-all duration-300 text-5xl">
+    <a href="/" class="absolute left-10 font-anton transition-all duration-300 text-5xl">
       NILS HALBACH
     </a>
 
@@ -30,7 +30,7 @@
       {#each links as link}
         <a
           href={link.href}
-          class="relative text-white/80 hover:text-white transition-colors text-base"
+          class="relative transition-colors text-base"
         >
           {link.label}
           {#if currentPath === link.href}

@@ -17,6 +17,6 @@
 <style>
 .primary:hover {
     color: var(--primary);
-    background-color: var(--bg-secondary);
+    background-color: var(--neutral-light);
 }
 </style>
