@@ -1,7 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 @import "tailwindcss";
+
+:root {
+  --neutral: #0a0a0a;
+  --neutral-light: #131313;
+  --primary: #fdfded;
+}
+
+.bg-main {
+  background-color: var(--neutral);
+}
+
+.bg-secondary {
+  background-color: var(--neutral-light);
+}
+
+.primary {
+  background-color: var(--primary);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--neutral-light);
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--neutral);
+  color: var(--primary);
+}
+
+@theme {
+  --font-anton: "Anton", sans-serif;
 }
 
 section {
