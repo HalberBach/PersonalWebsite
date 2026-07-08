@@ -1,12 +1,27 @@
-<div class="absolute left-6 bottom-">
-  <div class="absolute flex flex-col gap-3 text-white/70">
-    <!-- LinkedIn/GitHub Icons -->
-    dfdf
-  </div>
+---
+import linkedinIcon from "../../assets/linkedin_icon.svg?url";
+import githubIcon from "../../assets/github_icon.svg?url";
+---
 
-  <div
-    class="absolute text-white/50 text-xs [writing-mode:vertical-rl] rotate-180"
+<div class="absolute flex flex-col items-center gap-4 left-6 bottom-6">
+  <a
+    href="https://www.linkedin.com/in/nils-halbach/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img src={linkedinIcon} alt="LinkedIn" class="w-6 h-6" />
+  </a>
+  <a
+    href="https://github.com/HalberBach"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img src={githubIcon} alt="Github" class="w-6 h-6" />
+  </a>
+  <div class="w-0.5 h-40 bg-white/50 mx-auto" aria-hidden="true"></div>
+  <p
+    class="font-inter text-3xl font-thin [writing-mode:vertical-rl] rotate-180"
   >
     2026
-  </div>
+  </p>
 </div>
