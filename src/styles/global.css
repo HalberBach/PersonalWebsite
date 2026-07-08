@@ -5,6 +5,7 @@
   --neutral: #0a0a0a;
   --neutral-light: #131313;
   --primary: #fdfded;
+  --navbar-height: 5rem;
 }
 
 .bg-main {
@@ -41,12 +42,14 @@ html {
   --font-anton: "Anton", sans-serif;
 }
 
+body {
+  padding-top: var(--navbar-height);
+}
+
 section {
-  min-height: 100vh;
-  padding: 4rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  border: solid red;
+}
+
+.hero {
+  min-height: calc(100vh - var(--navbar-height));
 }
