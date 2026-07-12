@@ -3,7 +3,10 @@ import linkedinIcon from "../../assets/linkedin_icon.svg?url";
 import githubIcon from "../../assets/github_icon.svg?url";
 ---
 
-<div class="absolute flex flex-col items-center gap-4 left-6 bottom-6">
+<div
+  class="absolute flex flex-col items-center gap-4 left-6 bottom-6"
+  id="side-links"
+>
   <a
     href="https://www.linkedin.com/in/nils-halbach/"
     target="_blank"
@@ -25,3 +28,38 @@ import githubIcon from "../../assets/github_icon.svg?url";
     2026
   </p>
 </div>
+
+<style>
+  #side-links {
+    opacity: var(--fade-opacity, 1);
+    will-change: opacity;
+  }
+</style>
+
+<script>
+  const el = document.getElementById("side-links");
+  const maxScroll = 400;
+  let ticking = false;
+
+  function updateFade() {
+    if (!el) {
+      ticking = false;
+      return;
+    }
+
+    const progress = Math.min(window.scrollY / maxScroll, 1);
+    el.style.setProperty("--fade-opacity", String(1 - progress));
+    ticking = false;
+  }
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        requestAnimationFrame(updateFade);
+        ticking = true;
+      }
+    },
+    { passive: true },
+  );
+</script>
