@@ -4,7 +4,7 @@ import githubIcon from "../../assets/github_icon.svg?url";
 ---
 
 <div
-  class="absolute flex flex-col items-center gap-4 left-6 bottom-6"
+  class="absolute flex flex-row items-center gap-3 left-4 bottom-4 sm:flex-col sm:items-center sm:gap-4 sm:left-6 sm:bottom-6"
   id="side-links"
 >
   <a
@@ -21,9 +21,13 @@ import githubIcon from "../../assets/github_icon.svg?url";
   >
     <img src={githubIcon} alt="Github" class="w-6 h-6" />
   </a>
-  <div class="w-0.5 h-40 bg-white/50 mx-auto" aria-hidden="true"></div>
+  <div
+    class="w-24 h-0.5 bg-white/50 sm:w-0.5 sm:h-40 sm:mx-auto"
+    aria-hidden="true"
+  >
+  </div>
   <p
-    class="font-inter text-3xl font-thin [writing-mode:vertical-rl] rotate-180"
+    class="font-inter text-3xl font-thin sm:[writing-mode:vertical-rl] sm:rotate-180"
   >
     2026
   </p>

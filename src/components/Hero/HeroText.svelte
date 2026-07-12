@@ -18,7 +18,7 @@
 </script>
 
 <div
-  class="hero-text-wrapper uppercase font-bebas mx-auto w-full max-w-5xl text-[6rem] sm:text-[10rem] md:text-[16rem] leading-[0.73] tracking-[-0.02em] transform scale-y-[1.7]"
+  class="hero-text-wrapper uppercase font-bebas mx-auto w-full max-w-5xl mb-20 sm:mb-0 text-[4rem] sm:text-[10rem] md:text-[16rem] leading-[0.73] tracking-[-0.02em] transform scale-y-[1.7]"
 >
   <p
     class="hero-line m-0 text-left"
