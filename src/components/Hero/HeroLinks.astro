@@ -1,0 +1,69 @@
+---
+import linkedinIcon from "../../assets/linkedin_icon.svg?url";
+import githubIcon from "../../assets/github_icon.svg?url";
+---
+
+<div
+  class="absolute flex flex-row items-center gap-3 left-4 bottom-4 sm:flex-col sm:items-center sm:gap-4 sm:left-6 sm:bottom-6"
+  id="side-links"
+>
+  <a
+    href="https://www.linkedin.com/in/nils-halbach/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img src={linkedinIcon} alt="LinkedIn" class="w-6 h-6" />
+  </a>
+  <a
+    href="https://github.com/HalberBach"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img src={githubIcon} alt="Github" class="w-6 h-6" />
+  </a>
+  <div
+    class="w-24 h-0.5 bg-white/50 sm:w-0.5 sm:h-40 sm:mx-auto"
+    aria-hidden="true"
+  >
+  </div>
+  <p
+    class="font-inter text-3xl font-thin sm:[writing-mode:vertical-rl] sm:rotate-180"
+  >
+    2026
+  </p>
+</div>
+
+<style>
+  #side-links {
+    opacity: var(--fade-opacity, 1);
+    will-change: opacity;
+  }
+</style>
+
+<script>
+  const el = document.getElementById("side-links");
+  const maxScroll = 400;
+  let ticking = false;
+
+  function updateFade() {
+    if (!el) {
+      ticking = false;
+      return;
+    }
+
+    const progress = Math.min(window.scrollY / maxScroll, 1);
+    el.style.setProperty("--fade-opacity", String(1 - progress));
+    ticking = false;
+  }
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        requestAnimationFrame(updateFade);
+        ticking = true;
+      }
+    },
+    { passive: true },
+  );
+</script>
