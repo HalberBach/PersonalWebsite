@@ -1,0 +1,17 @@
+---
+import PageTitle from "./PageTitle.astro";
+const { title } = Astro.props;
+---
+
+<div class="flex flex-col min-h-screen page-layout-mt p-16 gap-20">
+  <PageTitle title={title} />
+  <div>
+    <slot />
+  </div>
+</div>
+
+<style>
+  .page-layout-mt {
+    padding-top: calc(4rem + var(--navbar-height));
+  }
+</style>

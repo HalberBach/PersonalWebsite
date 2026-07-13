@@ -9,3 +9,9 @@ import HeroText from "./HeroText.svelte";
   <HeroText client:load />
   <HeroLinks />
 </section>
+
+<style>
+  .hero {
+    min-height: calc(100vh - var(--navbar-height));
+  }
+</style>
