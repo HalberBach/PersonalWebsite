@@ -1,6 +1,33 @@
 ---
 import PageLayout from "../../layouts/PageLayout.astro";
 import TimelineContainer from "./TimelineContainer.astro";
+
+const timelineEntries = [
+  {
+    left: {
+      year: "2023 - 2026",
+      title: "FH Aachen",
+      subtitle: "University of Applied Sciences",
+      description:
+        "Dual Degree B.Sc. Applied Mathematics & Computer Science | MATSE Certification",
+    },
+    right: {
+      year: "2023 - 2026",
+      title: "BarmeniaGothaer",
+      subtitle: "Dual Study Work Partner",
+      description:
+        "Practical Experience in Software Development within the Insurance Context",
+    },
+  },
+  {
+    left: {
+      year: "AUG 2026 - NOW",
+      title: "IT University of Copenhagen",
+      subtitle: "MSc in Computer SciencE",
+      description: "MSc in Computer Science???",
+    },
+  },
+];
 ---
 
 <section {...Astro.props}>
@@ -13,29 +40,11 @@ import TimelineContainer from "./TimelineContainer.astro";
       </div>
 
       <div class="flex flex-col gap-16">
-        <TimelineContainer
-          left={{
-            year: "2023 - 2026",
-            title: "FH Aachen",
-            subtitle: "University of Applied Sciences",
-            description:
-              "Dual Degree B.Sc. Applied Mathematics & Computer Science | MATSE Certification",
-          }}
-          right={{
-            year: "2023 - 2026",
-            title: "Example Company",
-            subtitle: "Internship",
-            description: "Worked on frontend and UI experiments.",
-          }}
-        />
-        <TimelineContainer
-          left={{
-            year: "AUG 2026 - NOW",
-            title: "IT University of Copenhagen",
-            subtitle: "Nordic Engineering Excellence",
-            description: "MSc in Computer Science.",
-          }}
-        />
+        {
+          timelineEntries.map((entry) => (
+            <TimelineContainer left={entry.left} right={entry.right} />
+          ))
+        }
       </div>
     </div>
   </PageLayout>
