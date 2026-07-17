@@ -1,0 +1,42 @@
+---
+import WorkBox from "./WorkBox.astro";
+import TimelineConnector from "./TimelineConnector.astro";
+
+const { left, right } = Astro.props;
+---
+
+<div class="relative flex items-center justify-between gap-16">
+  <div
+    class="absolute left-1/2 top-1/2 z-10 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white"
+  >
+  </div>
+
+  {left && <TimelineConnector side="left" />}
+  {right && <TimelineConnector side="right" />}
+
+  {
+    left ? (
+      <WorkBox
+        year={left.year}
+        title={left.title}
+        subtitle={left.subtitle}
+        description={left.description}
+      />
+    ) : (
+      <div class="w-80" />
+    )
+  }
+
+  {
+    right ? (
+      <WorkBox
+        year={right.year}
+        title={right.title}
+        subtitle={right.subtitle}
+        description={right.description}
+      />
+    ) : (
+      <div class="w-80" />
+    )
+  }
+</div>

@@ -1,0 +1,20 @@
+---
+const { side = "left", class: className = "" } = Astro.props;
+
+const isRight = side === "right";
+---
+
+<div
+  class:list={[
+    "absolute left-1/2 top-1/2 h-px tl-connector-bg",
+    isRight ? "w-10 ml-2" : "-translate-x-full w-10 -ml-2",
+    className,
+  ]}
+>
+</div>
+
+<style>
+  .tl-connector-bg {
+    background-color: color-mix(in srgb, var(--primary) 15%, transparent);
+  }
+</style>
