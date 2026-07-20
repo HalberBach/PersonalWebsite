@@ -2,24 +2,24 @@
 const { year, title, subtitle, description } = Astro.props;
 ---
 
-<div class="flex flex-col gap-6 p-8 work-box-bg w-120 border-secondary border">
+<div class="flex flex-col gap-6 p-8 work-box w-120 border-secondary border">
   <p class="font-jetbrains">{year}</p>
   <h1 class="font-anton text-[2rem] uppercase leading-none">
     {title}
   </h1>
-  <p class="work-subtitle font-jetbrains uppercase text-xs tracking-wider">
+  <p class="work-box-subtitle font-jetbrains uppercase text-xs tracking-wider">
     {subtitle}
   </p>
   <p class="font-manrope font-light">{description}</p>
 </div>
 
 <style>
-  .work-box-bg {
+  .work-box {
     background-color: var(--secondary);
     border-color: color-mix(in srgb, var(--border-secondary) 30%, transparent);
   }
 
-  .work-subtitle {
+  .work-box-subtitle {
     color: var(--secondary-text);
   }
 </style>
