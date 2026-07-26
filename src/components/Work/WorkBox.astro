@@ -17,6 +17,17 @@ const { year, title, subtitle, description } = Astro.props;
   .work-box {
     background-color: var(--secondary);
     border-color: color-mix(in srgb, var(--border-secondary) 30%, transparent);
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      border-color 0.25s ease;
+    transform-origin: center;
+    will-change: transform, box-shadow;
+  }
+
+  .work-box:hover {
+    transform: scale(1.04);
+    z-index: 10;
   }
 
   .work-box-subtitle {
