@@ -1,6 +1,7 @@
 ---
 import PageLayout from "../../layouts/PageLayout.astro";
-import TimelineContainer from "./TimelineContainer.astro";
+import WorkEndBox from "./WorkEndBox.astro";
+import TimelineContainer from "./WorkTimelineContainer.astro";
 
 const timelineEntries = [
   {
@@ -52,22 +53,7 @@ const timelineEntries = [
         }
       </div>
 
-      <div class="relative flex flex-col items-center mt-16">
-        <div
-          class="absolute left-1/2 z-10 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-primary"
-        >
-        </div>
-
-        <div
-          class="flex flex-col items-center bg-primary p-10 md:w-100 sm:w-80 w-70"
-        >
-          <p class="text-9xl font-anton uppercase text-secondary">you</p>
-          <div class="my-4 h-px w-24 bg-main-light"></div>
-          <p class="text-xs uppercase font-bold font-jetbrains text-secondary">
-            Solving your problems
-          </p>
-        </div>
-      </div>
+      <WorkEndBox />
     </div>
   </PageLayout>
 </section>

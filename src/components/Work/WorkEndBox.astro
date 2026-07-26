@@ -1,0 +1,125 @@
+<div class="work-end-box-wrapper relative flex flex-col items-center mt-16">
+  <div
+    class="work-end-box-dot absolute left-1/2 z-10 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-primary"
+  >
+  </div>
+
+  <a href="/#contact" class="work-end-box-link">
+    <div
+      class="work-end-box flex flex-col items-center bg-primary border-primary border-6 p-10 md:w-100 sm:w-80 w-70"
+    >
+      <p
+        class="work-end-box-title text-9xl font-anton uppercase text-secondary"
+      >
+        you
+      </p>
+      <p
+        class="work-end-box-title-hover text-8xl text-center font-anton uppercase text-secondary"
+      >
+        contact me
+      </p>
+      <div class="work-end-box-title my-4 h-px w-24 bg-main-light"></div>
+      <p
+        class="work-end-box-title text-xs uppercase font-bold font-jetbrains text-secondary"
+      >
+        Solving your problems
+      </p>
+    </div>
+  </a>
+</div>
+
+<style>
+  .work-end-box {
+    position: relative;
+    overflow: hidden;
+    transition:
+      transform 0.3s ease,
+      border-color 0.3s ease;
+    will-change: transform, border-color;
+  }
+
+  .work-end-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      var(--neutral) 0%,
+      var(--neutral) 100%,
+      transparent 50%,
+      transparent 100%
+    );
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .work-end-box-link {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .work-end-box:hover {
+    transform: scale(1.04) translateY(5px);
+    border-color: var(--primary);
+  }
+
+  .work-end-box:hover::before {
+    transform: translateX(0);
+  }
+
+  .work-end-box,
+  .work-end-box .text-secondary,
+  .work-end-box .bg-main-light,
+  .work-end-box .work-end-box-title,
+  .work-end-box .work-end-box-title-hover {
+    transition:
+      color 0.25s ease,
+      background-color 0.25s ease,
+      opacity 0.25s ease;
+  }
+
+  .work-end-box:hover .text-secondary {
+    color: var(--primary);
+  }
+
+  .work-end-box-title-hover {
+    opacity: 0;
+    position: absolute;
+  }
+
+  .work-end-box:hover .work-end-box-title {
+    opacity: 0;
+  }
+
+  .work-end-box:hover .work-end-box-title-hover {
+    opacity: 1;
+  }
+
+  .work-end-box:hover .bg-main-light {
+    background-color: color-mix(
+      in srgb,
+      var(--primary) 20%,
+      var(--neutral) 80%
+    );
+  }
+
+  .work-end-box > *:not(.work-end-box-title-hover) {
+    position: relative;
+    z-index: 1;
+  }
+
+  .work-end-box-title-hover {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .work-end-box-wrapper:hover .work-end-box-dot {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+</style>
