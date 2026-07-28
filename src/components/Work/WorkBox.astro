@@ -1,0 +1,36 @@
+---
+const { year, title, subtitle, description } = Astro.props;
+---
+
+<div class="flex flex-col gap-6 p-8 work-box md:w-120 border-secondary border">
+  <p class="font-jetbrains">{year}</p>
+  <h1 class="font-anton text-[2rem] uppercase leading-none">
+    {title}
+  </h1>
+  <p class="work-box-subtitle font-jetbrains uppercase text-xs tracking-wider">
+    {subtitle}
+  </p>
+  <p class="font-manrope font-light">{description}</p>
+</div>
+
+<style>
+  .work-box {
+    background-color: var(--secondary);
+    border-color: color-mix(in srgb, var(--border-secondary) 30%, transparent);
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      border-color 0.25s ease;
+    transform-origin: center;
+    will-change: transform, box-shadow;
+  }
+
+  .work-box:hover {
+    transform: scale(1.04);
+    z-index: 10;
+  }
+
+  .work-box-subtitle {
+    color: var(--secondary-text);
+  }
+</style>

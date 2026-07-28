@@ -16,7 +16,7 @@
 <svelte:window bind:scrollY />
 
 <header
-  class={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out py-10 bg-secondary`}
+  class={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out py-10 bg-main-light`}
 >
   <div class="relative flex items-center justify-center px-6 md:px-10">
     <a
