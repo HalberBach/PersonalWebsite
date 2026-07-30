@@ -5,11 +5,13 @@ import ProjectBlock from "./ProjectBlock.astro";
 
 <section {...Astro.props}>
   <PageLayout title="Projects">
-    <div class="grid grid-cols-2 py-20 px-16 gap-x-20 gap-y-4">
-      <ProjectBlock />
-      <ProjectBlock />
-      <ProjectBlock />
-      <ProjectBlock />
+    <div
+      class="mx-auto w-full max-w-[140rem] grid grid-cos-1 lg:grid-cols-2 py-20 px-16 gap-x-24 gap-y-32"
+    >
+      <ProjectBlock class="px-10" />
+      <ProjectBlock class="px-6" />
+      <ProjectBlock class="px-6" />
+      <ProjectBlock class="px-10" />
     </div>
   </PageLayout>
 </section>
