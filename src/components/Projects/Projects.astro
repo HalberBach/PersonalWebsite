@@ -7,7 +7,6 @@ import ytBlockerImage from "../../assets/yt_blocker_icon.png?url";
 const project_entries = [
   {
     title: "Personal Website",
-    image: "personalWebsiteImage",
     content:
       "Build this Website using the Astro Framework and Svelte. Besides Figma there has, of course, also been a good use of AI when designing this project. Especially Googles Stitch was very helpful when building the first concepts and details.",
   },
@@ -29,7 +28,7 @@ const project_entries = [
 <section {...Astro.props}>
   <PageLayout title="Projects">
     <div
-      class="mx-auto w-full max-w-[120rem] grid grid-cos-1 lg:grid-cols-2 py-20 px-16 gap-x-24 gap-y-32"
+      class="project-grid mx-auto w-full max-w-[120rem] grid grid-cos-1 lg:grid-cols-2 py-20 px-16 gap-x-24 gap-y-32"
     >
       {
         project_entries.map((entry) => (
@@ -37,10 +36,62 @@ const project_entries = [
             title={entry.title}
             content={entry.content}
             image={entry.image}
-            class="px-12"
+            class="project-card px-12"
           />
         ))
       }
     </div>
   </PageLayout>
 </section>
+
+<script is:inline type="module">
+  if (typeof window !== "undefined") {
+    window.addEventListener("load", () => {
+      const grid = document.querySelector(".project-grid");
+      if (!grid) return;
+
+      const cards = Array.from(grid.querySelectorAll(".project-card"));
+      if (!cards.length) return;
+
+      cards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          cards.forEach((other) => {
+            other.classList.toggle("hovered", other === card);
+          });
+          grid.classList.add("has-hover");
+        });
+
+        card.addEventListener("mouseleave", () => {
+          grid.classList.remove("has-hover");
+          cards.forEach((other) => other.classList.remove("hovered"));
+        });
+      });
+    });
+  }
+</script>
+
+<style>
+  :global(.project-grid.has-hover .project-card:not(.hovered)) {
+    transform: scale(0.98);
+    filter: brightness(0.9) saturate(0.85);
+    opacity: 0.5;
+  }
+
+  :global(.project-card) {
+    transition:
+      transform 250ms ease,
+      filter 250ms ease,
+      opacity 250ms ease;
+    transform: scale(1);
+    filter: none;
+    opacity: 1;
+    will-change: transform, opacity, filter;
+  }
+
+  :global(.project-card.hovered) {
+    transform: scale(1.02);
+    filter: none;
+    opacity: 1;
+    z-index: 10;
+  }
+</style>
