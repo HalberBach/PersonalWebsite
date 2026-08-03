@@ -9,18 +9,21 @@ const project_entries = [
     title: "Personal Website",
     content:
       "Build this Website using the Astro Framework and Svelte. Besides Figma there has, of course, also been a good use of AI when designing this project. Especially Googles Stitch was very helpful when building the first concepts and details.",
+    project_url: "https://github.com/HalberBach/PersonalWebsite",
   },
   {
     title: "NewsTranslator",
     image: tagesschauImage,
     content:
       "A personal app I created to translate news articles of the german public News Channel 'Tagesschau' into different languages, for learning purposes. In my case it was supposed to integrate danish into my daily life. Simple app developed with React Native via Expo.",
+    project_url: "https://github.com/HalberBach/NewsTranslator",
   },
   {
     title: "YTBlocker",
     image: ytBlockerImage,
     content:
       "A Browser Extension to block shorts completely and sets a time limit for youtube. Allows to Black- or Whitelist certain channels permanently. Also allows to finish a youtube video before blocking youtube.",
+    project_url: "https://github.com/HalberBach/YT_BlockerExtension",
   },
 ];
 ---
@@ -36,6 +39,7 @@ const project_entries = [
             title={entry.title}
             content={entry.content}
             image={entry.image}
+            url={entry.project_url}
             class="project-card px-12"
           />
         ))

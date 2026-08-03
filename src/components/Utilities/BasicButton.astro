@@ -1,0 +1,14 @@
+---
+const {
+  class: className = "",
+  text = "Basic Button",
+  href = "#",
+} = Astro.props;
+---
+
+<a
+  class={`${className} cursor-pointer px-10 py-4 bg-primary text-secondary font-jetbrains font-semibold uppercase`}
+  href={href}
+>
+  {text}
+</a>

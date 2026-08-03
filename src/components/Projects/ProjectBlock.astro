@@ -1,9 +1,10 @@
 ---
-const { class: className = "", content, title, image } = Astro.props;
+import BasicButton from "../Utilities/BasicButton.astro";
+const { class: className = "", content, title, image, url = "#" } = Astro.props;
 ---
 
-<div class={`${className}`}>
-  <div class="w-full aspect-square overflow-hidden proj">
+<div class={`${className} project-block`}>
+  <div class="w-full aspect-square overflow-hidden relative">
     {
       image ? (
         <img src={image} alt={title} class="h-full w-full object-cover" />
@@ -14,16 +15,27 @@ const { class: className = "", content, title, image } = Astro.props;
       )
     }
   </div>
-  <div class="mt-6">
-    <h1 class="font-manrope font-semibold text-3xl">{title}</h1>
-    <p class="font-manrope mt-2">
+
+  <div class="mt-6 flex flex-col items-end">
+    <h1 class="font-manrope font-semibold text-3xl self-start">{title}</h1>
+    <p class="font-manrope mt-2 self-start">
       {content}
     </p>
+    <BasicButton class="project-button mt-8" text="Go to project" href={url} />
   </div>
 </div>
 
 <style>
-  .proj {
-    background-color: var(--secondary);
+  .project-block {
+  }
+  .project-block :global(.project-button) {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+  }
+  .project-block:hover :global(.project-button),
+  .project-block:focus-within :global(.project-button) {
+    opacity: 1;
+    visibility: visible;
   }
 </style>
