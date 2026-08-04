@@ -1,0 +1,74 @@
+---
+import PageLayout from "../../layouts/PageLayout.astro";
+---
+
+<section {...Astro.props}>
+  <PageLayout title="About me">
+    <div class="flex flex-col items-center gap-20">
+      <div class="grid w-fit grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-1
+        flex
+        justify-center">
+          <div class="w-[250px] h-[250px] bg-gray-200"></div>
+        </div>
+        <div
+          class="lg:col-span-2 flex flex-col gap-8 font-manrope tracking-wide"
+        >
+          <h1 class="text-3xl font-bold">Hey, I am Nils</h1>
+          <p class="text-lg w-xl">
+            I am a 21yo software engineer passionate about creating innovative
+            solutions for you. I am always eager to learn about new technologies
+            and topics, therefore I'm always looking for new challenges. I have
+            3 years of experience in software development, especially backend
+            services.
+          </p>
+          <p class="text-lg w-xl">
+            Another fact about me ist that I am also very passionate about
+            environmental issues and sustainability, which is why I am always
+            open to support projects that aim to make a positive impact on the
+            environment 🌲. I believe that technology can play a crucial role in
+            addressing these challenges.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col items-center gap-8 mt-20">
+      <p class="font-manrope font-semibold text-3xl">Contact Me</p>
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <div class="flex flex-col gap-8 font-manrope">
+          <div class="grid grid-cols-2 w-4xl gap-x-8">
+            <div>
+              <p class="uppercase font-semibold text-[16px]">Your Name</p>
+              <input
+                class="w-full bg-main-light mt-4 text-3xl pl-2 py-2"
+                type="text"
+                required
+                name="name"
+              />
+            </div>
+            <div>
+              <p class="uppercase font-semibold text-[16px]">Your E-Mail</p>
+              <input
+                class="w-full bg-main-light mt-4 text-3xl pl-2 py-2"
+                type="email"
+                required
+                name="email"
+              />
+            </div>
+          </div>
+          <div>
+            <p class="uppercase font-semibold text-[16px]">
+              Description of your inquiry
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </PageLayout>
+</section>
