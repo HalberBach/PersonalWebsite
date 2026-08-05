@@ -1,5 +1,6 @@
 ---
 import PageLayout from "../../layouts/PageLayout.astro";
+import BasicButton from "../../components/Utilities/BasicButton.astro";
 ---
 
 <section {...Astro.props}>
@@ -46,7 +47,7 @@ import PageLayout from "../../layouts/PageLayout.astro";
             <div>
               <p class="uppercase font-semibold text-[16px]">Your Name</p>
               <input
-                class="w-full bg-main-light mt-4 text-3xl pl-2 py-2"
+                class="w-full bg-main-light mt-4 text-2xl pl-2 py-2"
                 type="text"
                 required
                 name="name"
@@ -55,7 +56,7 @@ import PageLayout from "../../layouts/PageLayout.astro";
             <div>
               <p class="uppercase font-semibold text-[16px]">Your E-Mail</p>
               <input
-                class="w-full bg-main-light mt-4 text-3xl pl-2 py-2"
+                class="w-full bg-main-light mt-4 text-2xl pl-2 py-2"
                 type="email"
                 required
                 name="email"
@@ -66,7 +67,14 @@ import PageLayout from "../../layouts/PageLayout.astro";
             <p class="uppercase font-semibold text-[16px]">
               Description of your inquiry
             </p>
+            <textarea
+              class="w-full bg-main-light mt-4 text-xl pl-2 py-2 h-50"
+              name="message"
+              required></textarea>
           </div>
+        </div>
+        <div class="flex justify-center mt-8">
+          <BasicButton type="submit" text="Submit" />
         </div>
       </form>
     </div>
