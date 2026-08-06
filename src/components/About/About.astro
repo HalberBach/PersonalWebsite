@@ -41,13 +41,25 @@ import profileImage from "../../assets/profile.png?url";
         method="POST"
         data-netlify="true"
         netlify-honeypot="bot-field"
+        class="w-full max-w-4xl px-4"
       >
         <input type="hidden" name="form-name" value="contact" />
+        <p class="hidden">
+          <label>
+            Bitte nicht ausfüllen: <input name="bot-field" />
+          </label>
+        </p>
         <div class="flex flex-col gap-8 font-manrope">
-          <div class="grid grid-cols-2 w-4xl gap-x-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-8">
             <div>
-              <p class="uppercase font-semibold text-[16px]">Your Name</p>
+              <label
+                for="name-field"
+                class="uppercase font-semibold text-[16px] block"
+              >
+                Your Name
+              </label>
               <input
+                id="name-field"
                 class="w-full bg-main-light mt-4 text-2xl pl-2 py-2"
                 type="text"
                 required
@@ -55,8 +67,14 @@ import profileImage from "../../assets/profile.png?url";
               />
             </div>
             <div>
-              <p class="uppercase font-semibold text-[16px]">Your E-Mail</p>
+              <label
+                for="email-field"
+                class="uppercase font-semibold text-[16px] block"
+              >
+                Your E-Mail
+              </label>
               <input
+                id="email-field"
                 class="w-full bg-main-light mt-4 text-2xl pl-2 py-2"
                 type="email"
                 required
@@ -65,10 +83,14 @@ import profileImage from "../../assets/profile.png?url";
             </div>
           </div>
           <div>
-            <p class="uppercase font-semibold text-[16px]">
+            <label
+              for="message-field"
+              class="uppercase font-semibold text-[16px] block"
+            >
               Description of your inquiry
-            </p>
+            </label>
             <textarea
+              id="message-field"
               class="w-full bg-main-light mt-4 text-xl pl-2 py-2 h-50"
               name="message"
               required></textarea>
