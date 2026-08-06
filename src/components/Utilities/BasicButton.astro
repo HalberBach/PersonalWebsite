@@ -3,12 +3,26 @@ const {
   class: className = "",
   text = "Basic Button",
   href = "#",
+  type = "",
 } = Astro.props;
+
+const isButton = type === "submit" || type === "button" || type === "reset";
 ---
 
-<a
-  class={`${className} cursor-pointer px-10 py-4 bg-primary text-secondary font-jetbrains font-semibold uppercase`}
-  href={href}
->
-  {text}
-</a>
+{
+  isButton ? (
+    <button
+      type={type}
+      class={`${className} cursor-pointer px-10 py-4 bg-primary text-secondary font-jetbrains font-semibold uppercase`}
+    >
+      {text}
+    </button>
+  ) : (
+    <a
+      class={`${className} cursor-pointer px-10 py-4 bg-primary text-secondary font-jetbrains font-semibold uppercase`}
+      href={href}
+    >
+      {text}
+    </a>
+  )
+}
