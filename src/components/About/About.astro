@@ -1,6 +1,7 @@
 ---
 import PageLayout from "../../layouts/PageLayout.astro";
 import BasicButton from "../../components/Utilities/BasicButton.astro";
+import profileImage from "../../assets/profile.png?url";
 ---
 
 <section {...Astro.props}>
@@ -10,7 +11,7 @@ import BasicButton from "../../components/Utilities/BasicButton.astro";
         <div class="lg:col-span-1
         flex
         justify-center">
-          <div class="w-[250px] h-[250px] bg-gray-200"></div>
+          <img src={profileImage} alt="Profile Photo" class="w-70 h-70" />
         </div>
         <div
           class="lg:col-span-2 flex flex-col gap-8 font-manrope tracking-wide"
