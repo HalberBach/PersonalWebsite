@@ -56,10 +56,6 @@ html {
   --font-manrope: "Manrope", sans-serif;
 }
 
-body {
-  padding-top: var(--navbar-height);
-}
-
 .divider-color {
   border-color: color-mix(in oklab, var(--primary) 20%, transparent);
 }
