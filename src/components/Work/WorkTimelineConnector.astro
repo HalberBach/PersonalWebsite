@@ -6,8 +6,10 @@ const isRight = side === "right";
 
 <div
   class:list={[
-    "absolute left-1/2 top-1/2 h-px tl-connector-bg",
-    isRight ? "w-16 ml-2" : "-translate-x-full w-16 -ml-2",
+    "absolute tl-connector-bg",
+    isRight 
+      ? "md:block hidden md:left-1/2 md:top-1/2 md:h-px md:w-16 md:ml-2"
+      : "md:block hidden md:left-1/2 md:top-1/2 md:h-px md:-translate-x-full md:w-16 md:-ml-2",
     className,
   ]}
 >
