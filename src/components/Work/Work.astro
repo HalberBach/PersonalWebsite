@@ -31,13 +31,13 @@ const timelineEntries = [
   <PageLayout title="Work">
     <div class="relative w-full">
       <!-- Vertical line -->
-<!--       <div class="timeline absolute top-0 h-[180%] w-px">
+      <div class="timeline absolute top-0 h-[180%] w-px hidden md:block">
         <div
           id="timeline-line"
           class="timeline-line-color timeline-line h-full w-full"
         >
         </div>
-      </div> -->
+      </div> 
 
       <div class="flex flex-col gap-8 md:gap-16">
         {
@@ -110,12 +110,5 @@ const timelineEntries = [
   .timeline {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-  }
-
-  @media (max-width: 768px) {
-    .timeline {
-      left: 1rem;
-      transform: translateX(0) translateY(-50%);
-    }
   }
 </style>
