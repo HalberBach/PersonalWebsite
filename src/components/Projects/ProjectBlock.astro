@@ -16,9 +16,9 @@ const { class: className = "", content, title, image, url = "#" } = Astro.props;
     }
   </div>
 
-  <div class="mt-6 flex flex-col items-end">
-    <h1 class="font-manrope font-semibold text-3xl self-start">{title}</h1>
-    <p class="font-manrope mt-2 self-start">
+  <div class="mt-4 md:mt-6 flex flex-col items-end">
+    <h1 class="font-manrope font-semibold text-2xl md:text-3xl self-start">{title}</h1>
+    <p class="font-manrope mt-2 self-start text-justify">
       {content}
     </p>
     <BasicButton class="project-button mt-8" text="Go to project" href={url} />
