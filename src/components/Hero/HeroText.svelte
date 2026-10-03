@@ -21,16 +21,16 @@
   class="hero-text-wrapper uppercase font-bebas mx-auto w-full max-w-5xl mb-20 sm:mb-0 text-[4rem] sm:text-[10rem] md:text-[16rem] leading-[0.73] tracking-[-0.02em] transform scale-y-[1.7]"
 >
   <p
-    class="hero-line m-0 text-left"
+    class="hero-line m-0 text-left uppercase"
     style="transform: translateX(-{offset}px); opacity: {opacity};"
   >
-    SOFTWARE
+    software
   </p>
   <p
-    class="hero-line m-0 text-right"
+    class="hero-line m-0 text-right uppercase"
     style="transform: translateX({offset}px); opacity: {opacity};"
   >
-    DEVELOPER
+    developer
   </p>
 </div>
 
