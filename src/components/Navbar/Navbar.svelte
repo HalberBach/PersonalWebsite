@@ -7,6 +7,11 @@
   let scrollY = 0;
   $: isScrolled = scrollY > 80;
 
+  let showMobileMenu = false;
+  const toggleMobileMenu = () => {
+    showMobileMenu = !showMobileMenu;
+  };
+
   const links = [
     { label: "Work", href: "/#work" },
     { label: "Projects", href: "/#projects" },
@@ -45,9 +50,31 @@
       {/each}
     </nav>
 
-    <div class="absolute flex gap-2 right-6">
-      <CVDownloadButton />
-      <LanguageButton />  
+    <div class="absolute right-6">
+      <!-- Mobile -->
+      <button
+        class="md:hidden flex flex-col justify-center items-center w-8 h-8"
+        on:click={toggleMobileMenu}
+        aria-label="Menu"
+      >
+        <span class="block w-6 h-0.5 bg-primary mb-1"></span>
+        <span class="block w-6 h-0.5 bg-primary mb-1"></span>
+        <span class="block w-6 h-0.5 bg-primary"></span>
+      </button>
+
+      <!-- Desktop -->
+      <div class="hidden md:flex items-center gap-4">
+        <CVDownloadButton />
+        <LanguageButton />
+      </div>
+
+      <!-- Mobile Dropdown -->
+      {#if showMobileMenu}
+        <div class="md:hidden absolute right-0 top-full mt-2 bg-main-light p-4 rounded shadow-lg z-50 min-w-40 flex flex-col gap-2">
+          <CVDownloadButton />
+          <LanguageButton />
+        </div>
+      {/if}
     </div>
   </div>
 </header>
