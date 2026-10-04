@@ -10,7 +10,6 @@
     { label: "About", href: "/#about" },
     { label: "Projects", href: "/#projects" },
     { label: "Work", href: "/#work" },
-    { label: "Contact", href: "/#contact" },
   ];
 </script>
 
@@ -32,7 +31,10 @@
       ${isScrolled ? "right-24" : "left-1/2 -translate-x-1/2"}`}
     >
       {#each links as link}
-        <a href={link.href} class="relative transition-colors text-base">
+        <a
+          href={link.href}
+          class="relative transition-all duration-200 text-base hover:text-white hover:scale-125"
+        >
           {link.label}
           {#if currentPath === link.href}
             <span class="absolute -bottom-1 left-0 right-0 h-0.5 bg-white"

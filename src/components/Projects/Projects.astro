@@ -33,7 +33,7 @@ const project_entries = [
 <section {...Astro.props}>
   <PageLayout title="Projects">
     <div
-      class="project-grid mx-auto w-full max-w-[120rem] grid grid-cos-1 lg:grid-cols-2 py-20 px-16 gap-x-24 gap-y-32"
+      class="project-grid mx-auto w-full grid grid-cols-1 lg:grid-cols-2 p-4 md:p-16 gap-12 md:gap-y-32"
     >
       {
         project_entries.map((entry) => (
@@ -42,7 +42,7 @@ const project_entries = [
             content={entry.content}
             image={entry.image}
             url={entry.project_url}
-            class="project-card px-12"
+            class="project-card px-4 md:px-12"
           />
         ))
       }
