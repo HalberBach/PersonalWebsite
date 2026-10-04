@@ -1,5 +1,6 @@
 <script>
   import LanguageButton from "../Utilities/LanguageButton.svelte";
+  import CVDownloadButton from "../Utilities/CVDownloadButton.svelte";
 
   export let currentPath = "/";
 
@@ -7,9 +8,9 @@
   $: isScrolled = scrollY > 80;
 
   const links = [
-    { label: "About", href: "/#about" },
-    { label: "Projects", href: "/#projects" },
     { label: "Work", href: "/#work" },
+    { label: "Projects", href: "/#projects" },
+    { label: "About", href: "/#about" },
   ];
 </script>
 
@@ -28,7 +29,7 @@
 
     <nav
       class={`hidden md:flex gap-8 absolute top-1/2 -translate-y-1/2 transition-all 
-      ${isScrolled ? "right-24" : "left-1/2 -translate-x-1/2"}`}
+      ${isScrolled ? "right-60" : "left-1/2 -translate-x-1/2"}`}
     >
       {#each links as link}
         <a
@@ -44,8 +45,9 @@
       {/each}
     </nav>
 
-    <div class="absolute right-6">
-      <LanguageButton />
+    <div class="absolute flex gap-2 right-6">
+      <CVDownloadButton />
+      <LanguageButton />  
     </div>
   </div>
 </header>
