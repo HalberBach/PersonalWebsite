@@ -34,7 +34,7 @@
 
     <nav
       class={`hidden md:flex gap-8 absolute top-1/2 -translate-y-1/2 transition-all 
-      ${isScrolled ? "right-60" : "left-1/2 -translate-x-1/2"}`}
+      ${isScrolled ? "right-50" : "left-1/2 -translate-x-1/2"}`}
     >
       {#each links as link}
         <a
@@ -65,14 +65,14 @@
       <!-- Desktop -->
       <div class="hidden md:flex items-center gap-4">
         <CVDownloadButton />
-        <LanguageButton />
+        <!-- <LanguageButton /> -->
       </div>
 
       <!-- Mobile Dropdown -->
       {#if showMobileMenu}
         <div class="md:hidden absolute right-0 top-full mt-2 bg-main-light p-4 rounded shadow-lg z-50 min-w-40 flex flex-col gap-2">
           <CVDownloadButton />
-          <LanguageButton />
+          <!-- <LanguageButton /> -->
         </div>
       {/if}
     </div>
