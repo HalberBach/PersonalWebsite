@@ -1,8 +1,8 @@
 # PersonalWebsite
 
-A personal website currently in development that will serve as a digital portfolio and résumé.
+Personal website that will serve as a digital portfolio and résumé.
 
-This project is a work in progress and will be expanded step by step. The goal is to present my professional experience, projects, skills, and interests in a modern, clear, and engaging way.
+The goal is to present my professional experience and interests in a modern, clear, and fast way.
 
 In the future, the website will act as my digital CV, featuring:
 
