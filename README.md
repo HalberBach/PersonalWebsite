@@ -1,6 +1,6 @@
 # PersonalWebsite
 
-Personal website that will serve as a digital portfolio and résumé.
+Personal website nilshalb.com that will serve as a digital portfolio and résumé.
 
 The goal is to present my professional experience and interests in a modern, clear, and fast way.
 
